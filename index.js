@@ -11,10 +11,17 @@
   var theDiv = document.getElementById('output');
 
   // get recordcount
-  theDiv.innerHTML += LS.getRecordCount() + '<br/>';
+  theDiv.innerHTML += 'Total records: ' + LS.getRecordCount() + '<br/>';
 
   // get a specific item
   theDiv.innerHTML += 'Last record: ' + LS.getData(LS.getRecordCount(),'name') + '<br/>';
+
+  var rec = LS.getCodeByName('Puerto Rico');
+  theDiv.innerHTML += 'Get code by name Puerto Rico returned: ' + rec[0]['code'] + '<br/>';
+
+  var rec = LS.getNameByCode('PR');
+  theDiv.innerHTML += 'Get name by code PR returned: ' + rec[0]['name'] + '<br/>';
+
 
   theDiv.innerHTML += 'This is the data:<hr/>';
 

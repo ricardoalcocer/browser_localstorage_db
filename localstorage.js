@@ -27,4 +27,27 @@ export default class LocalStorage {
     return tmpdata;
   }
 
+  // test(){
+  //   var tmpOBJ = [{"countries":""}];
+  //   var dat =  this.getAll();
+  //   tmpOBJ[0].countries = dat;
+  //   return jsonPath(tmpOBJ, "$..countries[2]", {resultType:"VALUE"});
+  // }
+
+
+  getCodeByName(name){
+      var tmpOBJ = {};
+      var dat =  this.getAll();
+      tmpOBJ.data = dat;
+
+      return  jsonPath(tmpOBJ, "$..data[?(@.name=='" + name + "')]", {resultType:"VALUE"});
+  }
+
+  getNameByCode(code){
+      var tmpOBJ = {};
+      var dat =  this.getAll();
+      tmpOBJ.data = dat;
+
+      return  jsonPath(tmpOBJ, "$..data[?(@.code=='" + code + "')]", {resultType:"VALUE"});
+  }
 }
