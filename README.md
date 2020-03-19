@@ -29,11 +29,11 @@ While Cookies are restricted to 4 kilobytes,  Web storage provides far greater s
   theDiv.innerHTML += 'Last record: ' + LS.getData(LS.getRecordCount(),'name') + '<br/>';
 
   // get a single record by its name
-  var rec = LS.getCodeByName('Puerto Rico');
+  var rec = LS.getCodeByName('name','Puerto Rico');
   theDiv.innerHTML += 'Get code by name Puerto Rico returned: ' + rec[0]['code'] + '<br/>';
 
   // get a single record by its code
-  var rec = LS.getNameByCode('PR');
+  var rec = LS.getNameByCode('code','PR');
   theDiv.innerHTML += 'Get name by code PR returned: ' + rec[0]['name'] + '<br/>';
 
 

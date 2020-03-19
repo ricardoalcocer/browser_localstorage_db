@@ -16,10 +16,10 @@
   // get a specific item
   theDiv.innerHTML += 'Last record: ' + LS.getData(LS.getRecordCount(),'name') + '<br/>';
 
-  var rec = LS.getCodeByName('Puerto Rico');
+  var rec = LS.getCodeByName('name','Puerto Rico');
   theDiv.innerHTML += 'Get code by name Puerto Rico returned: ' + rec[0]['code'] + '<br/>';
 
-  var rec = LS.getNameByCode('PR');
+  var rec = LS.getNameByCode('code','PR');
   theDiv.innerHTML += 'Get name by code PR returned: ' + rec[0]['name'] + '<br/>';
 
 

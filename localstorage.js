@@ -35,19 +35,19 @@ export default class LocalStorage {
   // }
 
 
-  getCodeByName(name){
+  getCodeByName(key,name){
       var tmpOBJ = {};
       var dat =  this.getAll();
       tmpOBJ.data = dat;
 
-      return  jsonPath(tmpOBJ, "$..data[?(@.name=='" + name + "')]", {resultType:"VALUE"});
+      return  jsonPath(tmpOBJ, "$..data[?(@." + key + "=='" + name + "')]", {resultType:"VALUE"});
   }
 
-  getNameByCode(code){
+  getNameByCode(key,code){
       var tmpOBJ = {};
       var dat =  this.getAll();
       tmpOBJ.data = dat;
 
-      return  jsonPath(tmpOBJ, "$..data[?(@.code=='" + code + "')]", {resultType:"VALUE"});
+      return  jsonPath(tmpOBJ, "$..data[?(@." + key + "=='" + code + "')]", {resultType:"VALUE"});
   }
 }
