@@ -1,7 +1,7 @@
   import LocalStorage from './localstorage.js';
 
   var DBNAME = 'DB1';
-  let LS = new LocalStorage('DBNAME');
+  let LS = new LocalStorage(DBNAME);
 
 
   // set data
