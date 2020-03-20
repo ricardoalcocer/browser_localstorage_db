@@ -46,6 +46,10 @@ While Cookies are restricted to 4 kilobytes,  Web storage provides far greater s
   });
 ```
 
+## Demo
+
+See a live demo here: http://playground.ricardoalcocer.com/localstorage/
+
 ## Maintainers
 
 [@ricardoalcocer](https://github.com/ricardoalcocer)
