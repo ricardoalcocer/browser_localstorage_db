@@ -6,7 +6,7 @@ export default class LocalStorage {
   getRecordCount(){
     var tmpdata = localStorage.getItem(this.DBNAME);
     tmpdata = JSON.parse(tmpdata);
-    return tmpdata.length - 1;
+    return tmpdata.length;
   }
 
   setData(inData){
@@ -17,7 +17,6 @@ export default class LocalStorage {
     // returns a data item from local storage
     // gets the db name, index and key to get
     var tmpdata = localStorage.getItem(this.DBNAME);
-    tmpdata = JSON.parse(tmpdata);
     return tmpdata[idx][key];
   }
 
